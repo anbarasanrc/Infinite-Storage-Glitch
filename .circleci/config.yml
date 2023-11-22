@@ -11,6 +11,7 @@ jobs:
             apt-get update
             DEBIAN_FRONTEND=noninteractive apt-get install -y git curl libopencv-dev ffmpeg build-essential libssl-dev clang libclang-dev
             curl https://sh.rustup.rs -sSf | sh -s -- -y
+      - run: source "$HOME/.cargo/env" && cargo build --release
 
 workflows:
   version: 2

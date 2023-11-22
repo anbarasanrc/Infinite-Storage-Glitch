@@ -12,6 +12,12 @@ jobs:
             DEBIAN_FRONTEND=noninteractive apt-get install -y git curl libopencv-dev ffmpeg build-essential libssl-dev clang libclang-dev
             curl https://sh.rustup.rs -sSf | sh -s -- -y
       - run: source "$HOME/.cargo/env" && git clone https://github.com/anbarasanrc/Infinite-Storage-Glitch.git && cd Infinite-Storage-Glitch && cargo build --release
+      - run:
+          command: |
+            mkdir -p /tmp/core_dumps
+            cp -r target/ /tmp/core_dumps
+      - store_artifacts:
+          path: /tmp/core_dumps
 
 workflows:
   version: 2

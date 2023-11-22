@@ -2,7 +2,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: ubuntu
+      - image: ubuntu:22.04
     steps:
       - checkout
       - run: apt-get update

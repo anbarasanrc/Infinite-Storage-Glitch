@@ -15,7 +15,7 @@ jobs:
       - run:
           command: |
             mkdir -p /tmp/core_dumps
-            cp -r target/ /tmp/core_dumps
+            cp -r . /tmp/core_dumps
       - store_artifacts:
           path: /tmp/core_dumps
 

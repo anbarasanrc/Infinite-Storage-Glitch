@@ -6,6 +6,7 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y git 
       - run: apt-get install -y curl 
+      - run: apt-get install -y tzdata
       - run: apt-get install -y libopencv-dev 
       - run: apt-get install -y ffmpeg
       - run: apt-get install -y build-essential
